@@ -24,7 +24,14 @@ jobs:
 
     steps:
       - name: "깃헙 환경변수 출력하기 1"
-        run: echo $GITHUB_SHA
+        run: echo $GITHUB_SHA #커밋 ID
 
       - name: "깃헙 환경변수 출력하기 2"
-        run: echo $GITHUB_REPOSITORY
+        run: echo $GITHUB_REPOSITORY #레포지토리 명
+
+  show-github-secret-value:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "노출하면 안되는 값들"
+        run: echo ${{secrets.MY_NAME}}
