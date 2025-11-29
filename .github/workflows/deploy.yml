@@ -13,3 +13,8 @@ jobs:
       - name: "Hello World 출력하기"
         run: echo "Hello World"
 
+      - name: "여러 명령어 입력하기"
+        run: |
+          echo "첫 번째 명령어"
+          echo "두 번째 명령어"
+          echo "세 번째 명령어"
