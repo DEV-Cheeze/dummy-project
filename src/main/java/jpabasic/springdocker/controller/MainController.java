@@ -18,4 +18,10 @@ public class MainController {
     redisTemplate.opsForValue().set("key", "value");
     return Map.of("a", "hello,world!");
   }
+
+  @GetMapping("/main")
+  public Map<String, String> main(){
+    redisTemplate.opsForValue().set("main", "mainpage");
+    return Map.of("page", "mainpage");
+  }
 }
