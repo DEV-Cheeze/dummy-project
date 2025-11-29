@@ -18,3 +18,13 @@ jobs:
           echo "첫 번째 명령어"
           echo "두 번째 명령어"
           echo "세 번째 명령어"
+
+  show-github-env-value:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "깃헙 환경변수 출력하기 1"
+        run: echo $GITHUB_SHA
+
+      - name: "깃헙 환경변수 출력하기 2"
+        run: echo $GITHUB_REPOSITORY
