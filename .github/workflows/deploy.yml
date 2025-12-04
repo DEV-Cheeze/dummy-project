@@ -25,6 +25,9 @@ jobs:
       - name: 설치 완료 테스트
         run : java -version
 
+      - name: 빌드 권한 부여
+        run : chmod +x ./gradlew
+
       - name: 프로젝트 파일 테스트 및 빌드
         run : ./gradlew clean build
 
