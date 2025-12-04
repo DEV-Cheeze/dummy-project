@@ -8,30 +8,12 @@ on:
 jobs:
   My-Deploy-Job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: "Hello World 출력하기"
-        run: echo "Hello World"
+      - name: 해당 OS에 레포지토리 파일 업로드하기
+        uses: actions/checkout@v4
 
-      - name: "여러 명령어 입력하기"
+      - name: 잘 생성됐는지 확인하기
         run: |
-          echo "첫 번째 명령어"
-          echo "두 번째 명령어"
-          echo "세 번째 명령어"
+          ls -a
 
-  show-github-env-value:
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: "깃헙 환경변수 출력하기 1"
-        run: echo $GITHUB_SHA #커밋 ID
-
-      - name: "깃헙 환경변수 출력하기 2"
-        run: echo $GITHUB_REPOSITORY #레포지토리 명
-
-  show-github-secret-value:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: "노출하면 안되는 값들"
-        run: echo ${{secrets.MY_NAME}}
