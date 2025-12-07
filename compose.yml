@@ -2,7 +2,7 @@ services:
   my-server:
     image: ${DEPLOY_PATH} #업로드가 제대로 되는가?
     ports:
-      - 8080:8080
+      - 80:8080
     env_file:
       - .env
     environment:
