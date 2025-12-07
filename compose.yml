@@ -1,6 +1,6 @@
 services:
   my-server:
-    build: . #docker file을 기반으로하는 이미지 사용
+    build: ${DEPLOY_PATH} #docker file을 기반으로하는 이미지 사용
     ports:
       - 8080:8080
     env_file:
@@ -9,6 +9,8 @@ services:
       DB_URL: ${DB_URL}
       DB_PASSWORD: ${DB_PASSWORD}
       DB_USERNAME: ${DB_USERNAME}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
     depends_on:
       my-db:
         condition: service_healthy
