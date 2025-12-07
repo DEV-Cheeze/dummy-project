@@ -1,6 +1,6 @@
 services:
   my-server:
-    image: ${DEPLOY_PATH} #docker file을 기반으로하는 이미지 사용
+    image: ${DEPLOY_PATH} #업로드가 제대로 되는가?
     ports:
       - 8080:8080
     env_file:
