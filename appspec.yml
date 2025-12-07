@@ -10,7 +10,6 @@ permissions:
     owner: ubuntu # 작업을 수행함에 있어서 어떤 권한을 가지고 수행할 것인가?
     group: ubuntu
 
-
 hooks:
   ApplicationStart: # 애플리케이션이 시작할때 어떤 작업을 할 건지 정의
     - location: scripts/start-server.sh
