@@ -37,7 +37,7 @@ jobs:
 
       - name: 이미지 생성 및 ECR에 업로드
         run: |
-          docker build -t ${{ secrets.AWS_ECR_IMAGE_URL }}
+          docker build -t ${{ secrets.AWS_ECR_IMAGE_URL }} .
           docker push ${{ secrets.AWS_ECR_IMAGE_URL }}
 
       - name: 압축하기
