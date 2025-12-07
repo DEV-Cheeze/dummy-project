@@ -59,7 +59,7 @@ jobs:
       - name: CodeDeploy를 활용해 EC2에 프로젝트 코드 배포 명령
         run: |
           aws deploy create-deployment 
-          --application-name dummy-server-deploy
-          --deployment-config-name CodeDeployDefault.AllAtOnce
-          --deployment-group-name Production 
-          --s3-location bucket=dummy-server,bundleType=tgz,key=$GITHUB_SHA.tar.gz
+            --application-name dummy-server-deploy
+            --deployment-config-name CodeDeployDefault.AllAtOnce
+            --deployment-group-name Production 
+            --s3-location bucket=dummy-server,bundleType=tgz,key=$GITHUB_SHA.tar.gz
